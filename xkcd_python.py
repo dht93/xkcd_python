@@ -13,7 +13,7 @@ SELECT num FROM xkcd''')
 
 l=len(cur.fetchall())+1                                 #starts where the last execution left
 
-for i in range(10):                                     #downloads 20 images in one run
+for i in range(20):                                     #downloads 20 images in one run
     url='http://xkcd.com/'+str(l)+'/'
     r=requests.get(url)
     soup=BeautifulSoup(r.text,'html.parser')
